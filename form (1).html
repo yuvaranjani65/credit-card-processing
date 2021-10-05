@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>CREDIT CARD PROCESSING</title>
+<style>
+body{
+background-image:url('https://pixabay.com/get/g653e7a9c90b5681afdf14ece270833fcc69727eaef00ae5660eb14d08437e595591dd078bc55e578f8a090d3b728fd5fa8316325ebf1a4aad21ac952415d7a969db17b982ec568eb1524c66c43b27c69_1920.jpg')
+}</style>
+<script type="text/javascript">
+function validation()
+{
+if(document.f1.first name.value=="")
+{
+window.alert("Plz Enter Your first Name");
+return false;
+}
+else if(document.f1.last name.value=="")
+{
+window.alert("Plz Enter Your last Name");
+return false;
+}
+else if(document.f1.phone no.value=="")
+{
+window.alert("Plz Enter your phone no");
+return false;
+}
+else if(document.f1.email.value=="")
+{
+window.alert("Plz Enter Your E-mail:");
+return false;
+}
+else if(document.f1.email.value.indexOf('@gmail.com')==-1)
+{
+window.alert("Plz Enter Your Valid E-mail");
+return false;
+}
+else if(document.f1.addr.value=="")
+{
+window.alert("Plz Enter Your billing Address");
+return false;
+}
+else if(document.f1.credit card number.value=="")
+{
+window.alert("Plz Enter your credit card number");
+return false;
+}
+else if(document.f1.ccv no.value=="")
+{
+window.alert("Plz Enter your ccv no");
+return false;
+}
+else if(document.f1.payment amt.value=="")
+{
+window.alert("Plz Enter your payment amt");
+return false;
+}
+else if(document.f1.country.selectedIndex==0)
+{
+window.alert("Plz Select Your Country");
+return false;
+}
+else if(document.f1.exp date.selectedIndex==0)
+{
+window.alert("Plz Select Your date");
+return false;
+}
+else if((document.f1.rdo[0].checked==false)&&(document.f1.rdo[1].checked==false)&&(document.f1.rdo[2].checked==false))
+{
+window.alert("Plz select your payment type");
+return false;
+}
+else  if((document.f1.chk[0].checked==false)&&(document.f1.chk[1].checked==false)&&(document.f1.chk[2].checked==false))
+{
+window.alert("Plz Select Your Qualification");
+return false;
+}
+else
+return true;
+}
+</script> </head>
+<body>
+<h3 style="text-align:center">CREDIT CARD PROCESSING</h3>
+<form name="f1" action="register.html" onsubmit="return validation()">
+<fieldset>
+<legend>Registration Form</legend> <br/>
+<table border="8">
+<tr> <td><h3>first Name:</h3></td><td><input type="text" name="first name" size="31"></td> </tr>
+<tr> <td><h3>last Name:</h3></td> <td><input type="text" name="last name" size="31"></td> </tr>
+<tr> <td><h3>phone no:</h3></td> <td><input type="text" name="phone no" size="31"></td> </tr>
+<tr> <td><h3>E-mail:</h3></td> <td><input type="text" name="email" size="31"></td> </tr>
+<tr> <td><h3>Address:</h3></td> <td><Textarea name="addr" rows="5" cols="25"></Textarea></td> </tr>
+<tr> <td><h3>credit card number:</h3></td> <td><input type="text" name="credit card number" size="31"></td> </tr>
+<tr> <td><h3>ccv no:</h3></td> <td><input type="text" name="ccv no" size="31"></td> </tr>
+<tr> <td><h3>payment amt:</h3></td> <td><input type="text" name="payment amt" size="31"></td> </tr>
+<tr> <td><h3>exp date:</h3></td> <td><input type="date" name="date" size="31"></td> </tr>
+
+<tr> 
+<td><h3>Country</h3>:</td> 
+<td> <select name="country">
+<option>---Select Your Country---</option>
+<option>India</option>
+<option>China</option>
+<option>Nepal</option>
+<option>Myanmmar</option>
+</select>
+ 	</td> 
+</tr>
+
+<tr>
+ 	<td><h3>payment type:</h3></td>
+<td>
+ 		<input type="radio" name="rdo">RUPAY
+ 		<input type="radio" name="rdo">VISA <input type="radio"   
+ 		 name="rdo">MASTERCARD
+</td>
+ </tr>
+ 
+</table> <br/>
+<input type="submit" value="Register"> 
+<input type="submit" value="cancel"> 
+</fieldset> </form> </body> </html>
